@@ -1,6 +1,4 @@
-import { SectionHeading } from '@/components/ui/SectionHeading/SectionHeading';
-import { SectionSubHeading } from '@/components/ui/SectionSubHeading/SectionSubHeading';
-import { SectionTextContent } from '@/components/ui/SectionTextContent/SectionTextContent';
+import { SectionHeading, SectionSubHeading, SectionTextContent } from "@/components/ui"
 
 export const Service = () => {
   return (
