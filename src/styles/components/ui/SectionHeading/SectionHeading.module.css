@@ -1,7 +1,6 @@
 .section_heading {
     font-size: clamp(2.5rem, 4vw, 8rem);
     line-height: 1.1;
-    max-width: calc(4vw * 15);
     text-align: center;
     text-transform: uppercase;
 }
@@ -9,6 +8,5 @@
 @media (max-width: 728px) {
     .section_heading {
         line-height: normal;
-        max-width: calc(4vw * 20);
     }
 }
