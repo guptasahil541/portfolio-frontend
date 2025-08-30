@@ -1,6 +1,8 @@
+import React from 'react';
+
 import { SectionHeader, SectionTextContent } from '@/components/ui';
 
-export const Service = () => {
+export const Services = () => {
     return (
         <section id="services">
             <div className="section_flex container">
