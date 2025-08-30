@@ -1,8 +1,8 @@
-import { SectionHeadingProps } from './types'
-
 import React from 'react'
 
-import styles from './SectionHeading.module.css'
+import { SectionHeadingProps } from './types'
+
+import styles from '@/styles/components/ui/SectionHeading/SectionHeading.module.css'
 
 export const SectionHeading: React.FC<SectionHeadingProps> = (props) => {
   return (

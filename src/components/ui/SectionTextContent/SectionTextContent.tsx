@@ -1,8 +1,8 @@
-import { SectionTextContentProps } from './types'
-
 import React from 'react'
 
-import styles from './SectionTextContent.module.css'
+import { SectionTextContentProps } from './types'
+
+import styles from '@/styles/components/ui/SectionTextContent/SectionTextContent.module.css'
 
 export const SectionTextContent: React.FC<SectionTextContentProps> = (props) => {
   return (

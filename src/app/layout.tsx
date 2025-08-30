@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
-import { clashDisplay, thicccboi } from "./fonts/fonts";
+import { clashDisplay, thicccboi } from "@/fonts/fonts";
 
-import "./globals.css";
+import "@/styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Sahil Gupta - UI Designer and Developer",
