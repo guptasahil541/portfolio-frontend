@@ -1,8 +1,11 @@
+import { ReactLenis } from '@/components/utility/lenis';
+
 import type { Metadata } from 'next';
 
 import { clashDisplay, thicccboi } from '@/fonts/fonts';
 
 import '@/styles/globals.css';
+import 'lenis/dist/lenis.css';
 
 export const metadata: Metadata = {
     title: 'Sahil Gupta - UI Designer and Developer',
@@ -20,7 +23,9 @@ export default function RootLayout({
             lang="en"
             className={`${thicccboi.variable} ${clashDisplay.variable}`}
         >
-            <body>{children}</body>
+            <ReactLenis root>
+                <body>{children}</body>
+            </ReactLenis>
         </html>
     );
 }
