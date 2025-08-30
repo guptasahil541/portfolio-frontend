@@ -1,8 +1,9 @@
+import { Service } from '@/components/sections/service/Service';
+
 export default function page() {
   return (
     <>
-      <h1>This is Sahil Gupta's Portfolio</h1>
-      <p>Welcome</p>
+      <Service />
     </>
   );
 }

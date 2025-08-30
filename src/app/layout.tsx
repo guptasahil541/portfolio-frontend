@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+
 import { clashDisplay, thicccboi } from "./fonts/fonts";
 
 import "./globals.css";
