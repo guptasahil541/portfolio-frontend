@@ -1,0 +1,14 @@
+.section_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: calc(4vw * 15);
+}
+
+@media (max-width: 728px) {
+    .section_header {
+        margin-bottom: 1rem;
+        max-width: calc(4vw * 20);
+    }
+}

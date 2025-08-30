@@ -3,7 +3,9 @@ import { Service } from "@/components";
 export default function page() {
   return (
     <>
-      <Service />
+      <main className="main_flex">
+        <Service />
+      </main>
     </>
   );
 }
