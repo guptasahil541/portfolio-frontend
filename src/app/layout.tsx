@@ -1,4 +1,4 @@
-import { ReactLenis } from '@/components/utility/lenis';
+import { ReactLenis } from '@/utility/lenis';
 
 import type { Metadata } from 'next';
 

@@ -9,14 +9,9 @@ export const vertexShader = `
 export const fluidShader = `
   uniform float iTime;
   uniform vec2 iResolution;
-  uniform vec4 iMouse;
   uniform int iFrame;
   uniform sampler2D iPreviousFrame;
-  uniform float uBrushSize;
-  uniform float uBrushStrength;
-  uniform float uFluidDecay;
-  uniform float uTrailLength;
-  uniform float uStopDecay;
+
   varying vec2 vUv;
   
   vec2 ur, U;
@@ -73,36 +68,6 @@ export const fluidShader = `
           vec4 pr = vec4(e.z,w.z,n.z,s.z);
           me.xy = me.xy + 100.*vec2(pr.x-pr.y, pr.z-pr.w)/ur;
           
-          me.xy *= uFluidDecay;
-          me.z *= uTrailLength;
-          
-          if (iMouse.z > 0.0) {
-              vec2 mousePos = iMouse.xy;
-              vec2 mousePrev = iMouse.zw;
-              vec2 mouseVel = mousePos - mousePrev;
-              float velMagnitude = length(mouseVel);
-              float q = ln(U, mousePos, mousePrev);
-              vec2 m = mousePos - mousePrev;
-              float l = length(m);
-              if (l > 0.0) m = min(l, 10.0) * m / l;
-              
-              float brushSizeFactor = 1e-4 / uBrushSize;
-              float strengthFactor = 0.03 * uBrushStrength;
-              
-              float falloff = exp(-brushSizeFactor*q*q*q);
-              falloff = pow(falloff, 0.5);
-              
-              me.xyw += strengthFactor * falloff * vec3(m, 10.);
-              
-              if (velMagnitude < 2.0) {
-                  float distToCursor = length(U - mousePos);
-                  float influence = exp(-distToCursor * 0.01);
-                  float cursorDecay = mix(1.0, uStopDecay, influence);
-                  me.xy *= cursorDecay;
-                  me.z *= cursorDecay;
-              }
-          }
-          
           gl_FragColor = clamp(me, -0.4, 0.4);
       }
   }
@@ -112,13 +77,12 @@ export const displayShader = `
   uniform float iTime;
   uniform vec2 iResolution;
   uniform sampler2D iFluid;
-  uniform float uDistortionAmount;
   uniform vec3 uColor1;
   uniform vec3 uColor2;
   uniform vec3 uColor3;
   uniform vec3 uColor4;
   uniform float uColorIntensity;
-  uniform float uSoftness;
+
   varying vec2 vUv;
   
   void main() {
@@ -129,8 +93,6 @@ export const displayShader = `
     
     float mr = min(iResolution.x, iResolution.y);
     vec2 uv = (fragCoord * 2.0 - iResolution.xy) / mr;
-    
-    uv += fluidVel * (0.5 * uDistortionAmount);
     
     float d = -iTime * 0.5;
     float a = 0.0;
@@ -143,11 +105,6 @@ export const displayShader = `
     float mixer1 = cos(uv.x * d) * 0.5 + 0.5;
     float mixer2 = cos(uv.y * a) * 0.5 + 0.5;
     float mixer3 = sin(d + a) * 0.5 + 0.5;
-    
-    float smoothAmount = clamp(uSoftness * 0.1, 0.0, 0.9);
-    mixer1 = mix(mixer1, 0.5, smoothAmount);
-    mixer2 = mix(mixer2, 0.5, smoothAmount);
-    mixer3 = mix(mixer3, 0.5, smoothAmount);
     
     vec3 col = mix(uColor1, uColor2, mixer1);
     col = mix(col, uColor3, mixer2);
