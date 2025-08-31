@@ -25,6 +25,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = (props) => {
                         scrollTrigger: {
                             trigger: headingRef.current,
                             start: 'top bottom',
+                            end: 'bottom 50%',
                             scrub: true,
                         },
                         stagger: 0.25,
