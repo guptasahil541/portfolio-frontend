@@ -7,7 +7,7 @@ export const Projects = () => {
         <section id="projects">
             <div className="section_flex container">
                 <SectionHeader
-                    heading="Things I've built & brought to life"
+                    heading="Things I've built and brought to life"
                     subHeading="( projects )"
                 />
             </div>
