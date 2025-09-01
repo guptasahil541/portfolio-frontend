@@ -6,6 +6,6 @@ export const DEFAULT_PRESET = {
         color4: '#0700c5', // Royal blue
     },
     colorIntensity: 1.2,
-    pixelRatio: 0.2,
-    fps: 60,
+    pixelRatio: 1,
+    fps: 120,
 };
