@@ -8,7 +8,6 @@
 
 @media (max-width: 728px) {
     .section_header {
-        margin-bottom: 1rem;
-        max-width: calc(4vw * 20);
+        max-width: calc(4vw * 22);
     }
 }
