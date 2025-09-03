@@ -1,22 +1,18 @@
+import { Host_Grotesk } from 'next/font/google';
 import localFont from 'next/font/local';
 
-export const clashDisplay = localFont({
-    src: "./clashDisplay/ClashDisplay-Semibold.woff2",
-    variable: "--font-clash-display"
+export const hostGrotesk = Host_Grotesk({
+    weight: ['400', '500', '600'],
+    variable: '--font-host-grotesk',
 });
 
-export const thicccboi = localFont({
+export const neueMontreal = localFont({
     src: [
         {
-            path: './thicccboi/THICCCBOI-Medium.woff2',
+            path: './neueMontreal/NeueMontreal-Regular.otf',
             weight: '500',
             style: 'normal',
         },
-        {
-            path: './thicccboi/THICCCBOI-SemiBold.woff2',
-            weight: '600',
-            style: 'normal',
-        }
     ],
-    variable: "--font-thicccboi"
-})
+    variable: '--font-neue-montreal',
+});
