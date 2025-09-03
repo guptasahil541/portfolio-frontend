@@ -1,5 +1,5 @@
 :root {
-  --background: #f9f9f9;
+  --background: #F5F6EE;
 }
 
 html {
@@ -8,9 +8,9 @@ html {
 
 body {
   background: var(--background);
-  font-family: var(--font-thicccboi);
+  font-family: var(--font-host-grotesk);
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -27,7 +27,7 @@ a {
 }
 
 h1, h2 {
-  font-family: var(--font-clash-display);
+  font-family: var(--font-neue-montreal);
 }
 
 .main_flex {

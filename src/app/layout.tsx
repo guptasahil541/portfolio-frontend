@@ -2,7 +2,7 @@ import { ReactLenis } from '@/utility/lenis';
 
 import type { Metadata } from 'next';
 
-import { clashDisplay, thicccboi } from '@/fonts/fonts';
+import { hostGrotesk, neueMontreal } from '@/fonts/fonts';
 
 import '@/styles/globals.css';
 import 'lenis/dist/lenis.css';
@@ -21,7 +21,7 @@ export default function RootLayout({
     return (
         <html
             lang="en"
-            className={`${thicccboi.variable} ${clashDisplay.variable}`}
+            className={`${neueMontreal.variable} ${hostGrotesk.variable}`}
         >
             <ReactLenis root>
                 <body>{children}</body>
