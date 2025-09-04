@@ -1,15 +1,11 @@
-import { Hero, Projects, Story, Services, SocialPosts } from '@/components';
+import { AboutMe } from '@/components';
+
+import styles from './page.module.css';
 
 export default function page() {
     return (
-        <>
-            <main className="main_flex">
-                <Hero />
-                <Projects />
-                <Story />
-                <Services />
-                <SocialPosts />
-            </main>
-        </>
+        <main className={styles.main}>
+            <AboutMe />
+        </main>
     );
 }
