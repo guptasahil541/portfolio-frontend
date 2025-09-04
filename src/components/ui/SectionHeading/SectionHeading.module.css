@@ -1,0 +1,11 @@
+.section_heading {
+    font-size: clamp(2.4rem, 7vw, 8.4rem);
+    line-height: 1.1;
+}
+
+@media (max-width: 728px) {
+    .section_heading {
+        font-weight: 600;
+        line-height: normal;
+    }
+}
