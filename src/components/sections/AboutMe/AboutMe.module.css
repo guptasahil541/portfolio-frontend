@@ -1,5 +1,5 @@
 .about_me_container {
-    height: 100vh;
+    height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -38,6 +38,10 @@
     .section_heading {
         font-weight: 600;
         line-height: normal;
+    }
+
+    .section_sub_heading {
+        font-size: 1.4rem;
     }
 
     .section_content_container_inner {
