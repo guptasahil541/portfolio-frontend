@@ -1,0 +1,6 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(5rem, 20vw, 50rem);
+}

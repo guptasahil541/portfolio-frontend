@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 import { hostGrotesk, neueMontreal } from '@/fonts/fonts';
 
-import '@/styles/globals.css';
+import './globals.css';
 import 'lenis/dist/lenis.css';
 
 export const metadata: Metadata = {

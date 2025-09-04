@@ -1,0 +1,46 @@
+.about_me_container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section_heading {
+    font-size: clamp(2.4rem, 7vw, 8.4rem);
+    line-height: 1.1;
+}
+
+.section_sub_heading {
+    font-size: 1.6rem;
+}
+
+.section_header {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+}
+
+.section_content_container_inner {
+    width: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+}
+
+.section_content_container_outer {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 728px) {
+    .section_heading {
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .section_content_container_inner {
+        width: 100%;
+    }
+}

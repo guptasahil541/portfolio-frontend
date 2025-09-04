@@ -9,8 +9,8 @@ export const hostGrotesk = Host_Grotesk({
 export const neueMontreal = localFont({
     src: [
         {
-            path: './neueMontreal/NeueMontreal-Regular.otf',
-            weight: '500',
+            path: './neueMontreal/PPNeueMontreal-Book.otf',
+            weight: '400',
             style: 'normal',
         },
     ],
