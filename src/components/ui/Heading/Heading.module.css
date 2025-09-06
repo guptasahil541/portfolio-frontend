@@ -1,0 +1,29 @@
+.heading_extra_small {
+    font-size: 1.6rem;
+}
+
+.heading_large {
+    font-size: clamp(2.4rem, 7vw, 8.4rem);
+}
+
+.heading_extra_large {
+    font-size: clamp(3rem, 8vw, 9.6rem);
+}
+
+.heading_large,
+.heading_extra_large {
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+@media (max-width: 728px) {
+    .heading_extra_small {
+        font-size: 1.4rem;
+    }
+
+    .heading_large,
+    .heading_extra_large {
+        font-weight: 600;
+        line-height: normal;
+    }
+}

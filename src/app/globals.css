@@ -28,7 +28,6 @@ a {
 h1,
 h2 {
     font-family: var(--font-neue-montreal);
-    font-weight: 400;
 }
 
 .container {

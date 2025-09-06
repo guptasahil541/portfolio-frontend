@@ -1,9 +1,0 @@
-.section_sub_heading {
-    font-size: 1.6rem;
-}
-
-@media (max-width: 728px) {
-    .section_sub_heading {
-        font-size: 1.4rem;
-    }
-}

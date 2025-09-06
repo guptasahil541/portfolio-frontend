@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { SectionHeading, SectionSubHeading } from '@/components/ui';
+import { Heading } from '@/components/ui';
 
 import styles from './AboutMe.module.css';
 
@@ -12,10 +12,12 @@ export const AboutMe = () => {
             className={classNames('container', styles.about_me_container)}
         >
             <div className={styles.section_header}>
-                <SectionHeading>
+                <Heading as="h2">
                     Developer. Designer. <br />A Storyteller in UI
-                </SectionHeading>
-                <SectionSubHeading>ABOUT ME</SectionSubHeading>
+                </Heading>
+                <Heading as="h3" size="xs">
+                    ABOUT ME
+                </Heading>
             </div>
             <div className={styles.text_container_outer}>
                 <div aria-hidden></div>
