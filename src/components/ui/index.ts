@@ -1,3 +1,1 @@
-export * from './SectionHeading/SectionHeading';
-
-export * from './SectionSubHeading/SectionSubHeading';
+export * from './Heading/Heading';
