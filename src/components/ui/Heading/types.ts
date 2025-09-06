@@ -24,5 +24,4 @@ export interface HeadingProps
         HeadingVariants {
     as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
     ref?: Ref<HTMLHeadingElement>;
-    children: React.ReactNode;
 }
